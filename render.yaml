@@ -1,0 +1,12 @@
+services:
+  - name: d00r
+    type: web
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+
+    startCommand: ["/bin/bash", "start.sh"]
+
+    envVars:
+      - key: PORT
+        value: "10000"
